@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Compare Country</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Country Compare</a>
+        </div>
+      </div>
+    </nav>
+    <div id="loader" class="section center">
+        <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+  </div>
+  <p class="red-text">Loading data. Please Wait... </p>
+
+    </div>
+    <div class="container hide" id="content">
+      <div id="countries"class="row"></div>
+        <script id="template" type="x-tmpl-mustache">
+        <div class="col s6 country" id="country-{{countryIndex}}">
+          <h2>
+           <span class="code"></span>
+           <a class="btn-floating btn-small waves-effect red ligthen-2 modal-trigger" href="#" data-country-index="{{countryIndex}}"><i class="material-icons">mode_edit</i></a></h2>
+          <pclass="name flow-text"></p>
+          <div class="card red lighten-4 population">
+            <div class="card-content red-text">
+              <span class="card-title">Pouplation</span>
+              <p></p>
+            </div>
+          </div>
+          <div class="card red lighten-4 Area">
+            <div class="card-content red-text">
+              <span class="card-title">Area</span>
+              <p></p>
+            </div>
+          </div>
+          <div class="card red lighten-4 population-density">
+            <div class="card-content red-text">
+              <span class="card-title">population Density</span>
+              <p></p>
+            </div>
+          </div>
+          <div class="card red lighten-4 gini">
+            <div class="card-content red-text">
+              <span class="card-title">Gini Coffecient</span>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        </script>
+
+    </div>
+    <div id="edit-country-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <div class="container">
+          <h4>Choose a country</h4>
+          <div class="card-panal">
+            <div class="input-field col s6">
+              <input placeholder="Search for a country" id="country-name" type="text">
+              <label for="country-name">country Name</label>
+            </div>
+          </div>
+          <div class="collection">
+            <a href="#" class="collection-item">dummy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="js/mustache.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>

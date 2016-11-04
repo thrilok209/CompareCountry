@@ -1,0 +1,22 @@
+{
+  "name": "comparecountry",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w css/src/main.scss:css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thrilok209/CompareCountry.git"
+  },
+  "author": "thrilok",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/thrilok209/CompareCountry/issues"
+  },
+  "devDependencies": {
+    "lite-server": "~2.2.2",
+    "nodemon": "^1.11.0"
+  }
+}
